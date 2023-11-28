@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home";
+import Explore from "./components/Explore/Explore";
+import Catagories from "./components/Catagories";
 import SearchResult from "./components/SearchResult";
+import SingleBook from "./components/SingleBook/SingleBook";
 
 function App() {
   return (
@@ -10,7 +13,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/search-results" element={<SearchResult />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/catagories" element={<Catagories />} />
+          <Route path="/search-result" element={<SearchResult />} />
+          <Route path="/single-book/:id" element={<SingleBook />} />
         </Routes>
       </div>
     </Router>

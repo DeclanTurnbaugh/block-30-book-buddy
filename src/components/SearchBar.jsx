@@ -10,7 +10,7 @@ const SearchBar = () => {
   };
 
   const handleSearch = () => {
-    navigate(`/search-results?query=${encodeURIComponent(query)}`);
+    navigate(`/search-result?query=${encodeURIComponent(query)}`);
   };
 
   return (
