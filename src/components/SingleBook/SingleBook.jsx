@@ -26,6 +26,13 @@ const SingleBook = () => {
     <div>
       <h2>{book.title}</h2>
       <p>{book.author}</p>
+      <p>{book.description}</p>
+      <img src={book.coverimage} alt={book.title} />
+      {book.available ? (
+        <p>This book is available!</p>
+      ) : (
+        <p>This book is not currently available.</p>
+      )}
     </div>
   );
 };
